@@ -1,12 +1,12 @@
 from aiogram import types, Dispatcher
-from create import dp,bot
-
+from create import bot
+from keyboards import kb_client
 
 # @dp.message_handler(commands=['start','help'])
 async def send_welcome(message: types.Message):
     try:
-        await bot.send_message(message.from_user.id, "Привет!\nДавай начнем выбирать!")
-        message.delete()
+        await bot.send_message(message.from_user.id, "Привет!\nДавай начнем выбирать!", reply_markup=kb_client)
+        await message.delete()
     except:
         await message.reply_to_message('Общение с ботом через лс, @ZMTestingV1bot')
 
