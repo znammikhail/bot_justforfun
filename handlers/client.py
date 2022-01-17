@@ -33,5 +33,5 @@ def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(send_welcome, commands=['start', 'help'])
     dp.register_message_handler(send_open, commands=['Режим_работы'])
     dp.register_message_handler(send_place, commands=['Расположение'])
-    dp.register_message_handler(menu_command, commands=['Меню'])
+    dp.register_message_handler(menu_command, commands=['Примеры_фотоссесий'])
     dp.register_message_handler(url_command, commands=['Ссылки'])

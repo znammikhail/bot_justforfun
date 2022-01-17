@@ -17,11 +17,11 @@ class FSMAdmin(StatesGroup):  #класс состояний
 
 # получаем id модератора , проверка что это админ
 #@dp.message_handler(commands=['moderator'], is_chat_admin=True)
+
 async def make_changes(message: types.Message):
     global ID
     ID = message.from_user.id
     await bot.send_message(message.from_user.id, 'Что будем менять, Танюшка?', reply_markup=admin_kb.button_case_admin)
-
     await message.delete()
 
 
