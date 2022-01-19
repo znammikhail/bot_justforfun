@@ -5,7 +5,7 @@ from aiogram import types, Dispatcher
 
 # @dp.message_handler()
 async def echo(message: types.Message):
-    if {i.lower().translate(str.maketrans('','',string.punctuation)) for i in message.text.split(' ')}.intersection(set(mat.ar)) != set():
+    if {i.lower().translate(str.maketrans('', '', string.punctuation)) for i in message.text.split(' ')}.intersection(set(mat.ar)) != set():
         await message.reply('Маты запрещены')
         await message.delete()
 

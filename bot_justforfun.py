@@ -7,6 +7,7 @@ async def on_startup(_):
     print('Бот вышел в онлайн')
     sqlite_db.sql_start()   # подключаемся к базе даннных или создаем ее
 
+
 client.register_handlers_client(dp)
 admin.register_handlers_admin(dp)
 other.register_handlers_other(dp)
