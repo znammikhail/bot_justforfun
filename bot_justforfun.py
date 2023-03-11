@@ -3,7 +3,9 @@ from create import dp
 from handlers import client, admin, other
 from data_base import sqlite_db
 
+
 async def on_startup(_):
+    """General function"""
     print('Бот вышел в онлайн')
     sqlite_db.sql_start()   # подключаемся к базе даннных или создаем ее
 
