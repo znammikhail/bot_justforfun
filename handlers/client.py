@@ -15,12 +15,12 @@ async def send_welcome(message: types.Message):
 
 # @dp.message_handler(commands=['Режим_работы'])
 async def send_open(message: types.Message):
-    await bot.send_message(message.from_user.id, "пн вт среда да и в любое аремя впринципе")
+    await bot.send_message(message.from_user.id, "Когда вам будет удобно")
 
 
 # @dp.message_handler(commands=['Расположение'])
 async def send_place(message: types.Message):
-    await bot.send_message(message.from_user.id, "спб карбышева")
+    await bot.send_message(message.from_user.id, "Санкт-Петербург")
 
 # @dp.message_handler(commands=['Меню])
 async def menu_command(message: types.Message):
