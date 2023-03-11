@@ -6,7 +6,7 @@ from create import bot, dp
 from data_base import sqlite_db
 from keyboards import admin_kb, client_kb
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from config import ADMIN
+from config
 
 
 ID = None
@@ -32,7 +32,7 @@ async def make_changes(message: types.Message):
 
 
 async def start_changes(message: types.Message):
-    if message.from_user.id == ADMIN:
+    if message.from_user.id == config.ADMIN:
         await bot.send_message(message.from_user.id, 'Что будем менять?', reply_markup=admin_kb.button_case_admin)
         await message.delete()
 
